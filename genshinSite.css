@@ -1,0 +1,24 @@
+/*
+TITLE: Honors Project
+AUTHOR: Noran Abdel-Aziz (NA)
+CREATE DATE: 26 April 2023
+PURPOSE: To demonstrate everything I've learned
+LAST MODIFIED ON: 28 April 2023
+LAST MODIFIED BY: Noran Abdel-Aziz (NA)
+MODIFICATION HISTORY:
+28 April 2023: finished lab
+THEME: Genshin Impact wisher and form!
+*/
+
+body {
+    background-color: azure;
+}
+
+.body {
+    color: navy;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.step20 {
+    color: red;
+}

@@ -1,0 +1,191 @@
+<!--
+TITLE: Honors Project
+AUTHOR: Noran Abdel-Aziz (NA)
+CREATE DATE: 26 April 2023
+PURPOSE: To demonstrate everything I've learned this semester
+LAST MODIFIED ON: 28 April 2023
+LAST MODIFIED BY: Noran Abdel-Aziz (NA)
+MODIFICATION HISTORY:
+28 April 2023: finished lab
+THEME: Genshin Impact wisher and form!
+-->
+<!DOCTYPE html>
+<html lang = "en-us">
+    <head>
+        <meta charset = "UTF-8">
+        <title>Genshin Wisher</title>
+        <!-- step 2 - style HTML with CSS -->
+        <!--<link rel="stylesheet" href = "//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">-->
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel = "stylesheet" href = "honors.css">
+    </head>
+    <body>
+        <h1 id = "header">Honors Project</h1>
+        <p class = "greeting"></p>
+        <div id="tabs">
+            <ul>
+              <li><a href="#fragment-1"><span>Genshin Wisher</span></a></li>
+              <li><a href="#fragment-2"><span>Genshin Form</span></a></li>
+              <li><a href="#fragment-3"><span>Honors Project</span></a></li>
+            </ul>
+            <div id="fragment-1">
+                <h3>Wisher</h3>
+                <p>List of 5 stars you can get:</p>
+                <p id = "list"></p>
+                <button id = "roll">Wish here!</button>
+                <p id = "counter"></p>
+                <p id = "wishResults"></p>
+                <p></p>
+                <h3>Weapon Inventory:</h3>
+                <div id = "bubble1">
+                    <p id = "bubble2">Before attack increment:</p>
+                    <p id = "objectOutput1"></p>
+                </div>
+                <p>After attack increment:</p>
+                <p id = "objectOutput2"></p>
+                <p id = "remove">this will be removed!</p>
+            </div>
+            <div id="fragment-2">
+                <h3>Form Output</h3>
+                <p id = "emailOutput"></p>
+                <p id = "passOutput"></p>
+                <p id = "favChar"></p>
+                <p id = "favArchon"></p>
+                <p id = "favElements"></p>
+                <h3>Form:</h3>
+                <form id = "form8" method = "get">
+                <!-- step 21 - include at least 5 input fields (text, radio, checkbox, email, password) -->
+                    <div>
+                        <label for = "emailLbl">What is your genshin username? (email)</label>
+                        <!-- step 23 - use a regular expression for validation on at least one input field -->
+                        <input id = "emailLbl" type = "email" pattern = "[^@\s]+@[^@\s]+\.[^@\s]+">
+                    </div>
+                    <div>
+                        <label for = "passLbl" >What is your genshin password?</label>
+                        <input id = "passLbl" type = "password">
+                    </div>
+                    <div>
+                        <label for = "step5">Who is your favorite character?</label>
+                        <input id = "step5" type = "text">
+                    </div>
+                    <div>
+                        <label>Who is your favorite archon?</label>
+                        <input id = "Venti" type = "radio" name = "favoriteArchon">
+                        <label for = "Venti">Venti</label>
+                        <input id = "Zhongli" type = "radio" name = "favoriteArchon">
+                        <label for = "Zhongli">Zhongli</label>
+                        <input id = "Raiden" type = "radio" name = "favoriteArchon">
+                        <label for = "Raiden">Raiden</label>
+                        <input id = "Nahida" type = "radio" name = "favoriteArchon">
+                        <label for = "Nahida">Nahida</label>
+                    </div>
+                    <div>
+                        <label>What is your favorite element(s)?</label>
+                        <input id = "Anemo" type = "checkbox">
+                        <label for = "Anemo">Anemo</label>
+                        <input id = "Geo" type = "checkbox">
+                        <label for = "Geo">Geo</label>
+                        <input id = "Electro" type = "checkbox">
+                        <label for = "Electro">Electro</label>
+                        <input id = "Dendro" type = "checkbox">
+                        <label for = "Dendro">Dendro</label>
+                        <input id = "Hydro" type = "checkbox">
+                        <label for = "Hydro">Hydro</label>
+                        <input id = "Cryo" type = "checkbox">
+                        <label for = "Cryo">Cryo</label>
+                        <input id = "Pyro" type = "checkbox">
+                        <label for = "Pyro">Pyro</label>
+                    </div>
+                    <!-- step 8 - include form method get, submit/reset buttons -->
+                    <input type = "submit" id = "focusButton">
+                    <input type = "reset">
+                </form>
+                <!-- step - create an output area for form -->
+                <p id = "p11a"></p>
+                <p id = "p11"></p>
+                <p id = "step21"></p>
+                <p id = "step12"></p>
+            </div>
+            <div id = "fragment-3">
+                <h3 id = "bounce">Character Object Output</h3>
+                <p id = "objOutput1"></p>
+                <p id = "objOutput2"></p>
+                <p id = "objOutput3"></p>
+                <p id = "objOutput4"></p>
+                <h3 id = "bouncer">Honors Form</h3>
+                <!-- step 6 - create a form and style using jQuery UI plugin (below)-->
+                <form id = "form" method = "get" name = "registration" >
+                    <div>
+                        <label for = "emailLbl2" class = "required">What is your genshin username? (email)</label>
+                        <input id = "emailLbl2" name = "emailLbl2" type = "email" pattern = "[^@\s]+@[^@\s]+\.[^@\s]+" required>
+                    </div>
+                    <div>
+                        <label for = "passLbl2" class = "required">What is your genshin password?</label>
+                        <input id = "passLbl2" name = "passLbl2" type = "password" required>
+                    </div>
+                    <div>
+                        <label for = "boss" class = "required">Who is your favorite weekly boss?</label>
+                        <input id = "boss" name = "boss" type = "text" required>
+                    </div>
+                    <div>
+                        <label id = "drag">Who is your favorite villain?</label>
+                        <input id = "Childe" type = "radio" name = "favoriteVillain">
+                        <label for = "Childe">Childe</label>
+                        <input id = "Signora" type = "radio" name = "favoriteVillain">
+                        <label for = "Signora">Signora</label>
+                        <input id = "Scaramouche" type = "radio" name = "favoriteVillain">
+                        <label for = "Scaramouche">Scaramouche</label>
+                        <input id = "twin" type = "radio" name = "favoriteVillain">
+                        <label for = "twin">The Twin</label>
+                    </div>
+                    <div>
+                        <label>What is your favorite region(s)?</label>
+                        <input id = "Mondstadt" type = "checkbox" name = "favReg">
+                        <label for = "Mondstadt">Mondstadt</label>
+                        <input id = "Liyue" type = "checkbox" name = "favReg">
+                        <label for = "Liyue">Liyue</label>
+                        <input id = "Inazuma" type = "checkbox" name = "favReg">
+                        <label for = "Inazuma">Inazuma</label>
+                        <input id = "Sumeru" type = "checkbox" name = "favReg">
+                        <label for = "Sumeru">Sumeru</label>
+                        <input id = "Fontaine" type = "checkbox" name = "favReg">
+                        <label for = "Fontaine">Fontaine</label>
+                        <input id = "Snezhnaya" type = "checkbox" name = "favReg">
+                        <label for = "Snezhnaya">Snezhnaya</label>
+                        <input id = "Natlan" type = "checkbox" name = "favReg">
+                        <label for = "Natlan">Natlan</label>
+                    </div>
+                    <div>
+                        <label>How many characters do you own?</label>
+                        <label>Move the slider to answer</label>
+                    </div>
+                    <div id = "sliderForm"></div>
+                    <div>
+                        <input type = "text" id = "currentVal" name = "currentVal" disabled = "disabled" required>
+                    </div>
+                    <div>
+                        <label for = "datepicker" class = "required">When did you start playing genshin?</label>
+                        <input type = "text" id = "datepicker" name = "datepicker" required>
+                    </div>
+                    <input type = "submit" id = "focusButton2" onClick = "return empty()">
+                    <!-- step 10 - contain reset button -->
+                    <input type = "reset">
+                </form>
+                <h3>Honors Form Output</h3>
+                <p id = "emailOutput2"></p>
+                <p id = "passOutput2"></p>
+                <p id = "favBoss"></p>
+                <p id = "favVil"></p>
+                <p id = "favRegions"></p>
+                <p id = "numChars"></p>
+                <p id = "dateJoined"></p>
+            </div>
+          </div>
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script src = "https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+        <!--<script src="//code.jquery.com/jquery-1.12.4.js"></script>-->
+        <!--<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>-->
+        <script src = "honors.js"></script>
+    </body>
+</html>
