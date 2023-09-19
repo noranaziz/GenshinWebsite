@@ -1,6 +1,6 @@
 # Genshin Gacha/Form
 By Noran Abdel-Aziz.
-Demonstration site showcasing HTML, CSS, and jQuery.
+Demonstration site showcasing HTML, CSS, and JavaScript/jQuery.
 
 ## Technologies Used
 - HTML
